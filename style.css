@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #282c34;
+    overflow: hidden; /* Prevents scrollbars caused by animation */
+}
+
+.header {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 2em 1em;
+}
+
+.header h1 {
+    margin: 0.5em 0;
+}
+
+.header p {
+    margin: 0.5em 0;
+}
+
+#ctaButton {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#ctaButton:hover {
+    background-color: #e64a19;
+}
+
+.content {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.content h2 {
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animated Background */
+#animatedBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures it stays behind other content */
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(0.8);
+    }
+    100% {
+        transform: translateY(-120vh) scale(1.2);
+    }
+}
+
+.bubble:nth-child(odd) {
+    animation-duration: 12s;
+    background-color: rgba(135, 206, 235, 0.6); /* Light blue color */
+}
+
+.bubble:nth-child(even) {
+    animation-duration: 8s;
+    background-color: rgba(255, 182, 193, 0.6); /* Light pink color */
+}
